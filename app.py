@@ -3,7 +3,8 @@ from src.data_processing.calculate_returns import calculate_returns, calculate_c
 from src.visualization.create_heatmap import create_heatmap
 
 # Define the cryptocurrencies you're interested in and the time period
-symbols = ['BTC/USDT', 'ETH/USDT', 'ADA/USDT']  # Add more symbols as per your interest
+symbols = ['BTC/USDT', 'ETH/USDT', 'ADA/USDT', 'XRP/USDT', 'DOT/USDT', 'UNI/USDT', 'LTC/USDT', 'LINK/USDT', 'BCH/USDT', 'XLM/USDT', 'USDC/USDT', 'DOGE/USDT', 'AAVE/USDT', 'ATOM/USDT', 'AVAX/USDT', 'BNB/USDT', 'EOS/USDT', 'ETC/USDT', 'FIL/USDT', 'MKR/USDT', 'NEO/USDT', 'SNX/USDT', 'SOL/USDT', 'TRX/USDT', 'VET/USDT', 'XEM/USDT', 'YFI/USDT', 'ZEC/USDT']
+  # Add more symbols as per your interest
 timeframe = '1d'
 since = 1672444800000  # Start time (1st Jan 2023)
 till = 1677705599000  # End time (30th Jun 2023)
