@@ -9,13 +9,13 @@ since = 1672444800000  # Start time (1st Jan 2023)
 till = 1677705599000  # End time (30th Jun 2023)
 
 # Fetch historical data, calculate returns, and merge the return data
+# Fetch historical data, calculate returns, and add the return series to the 'returns' dictionary
 returns = {}
 for symbol in symbols:
     ohlcv = fetch_historical_data(symbol, timeframe, since, till)
-    returns[symbol] = calculate_returns(ohlcv)
+    ohlcv_with_returns = calculate_returns(ohlcv)
+    returns[symbol] = ohlcv_with_returns['return']  # we only want to keep the 'return' series
 
-# Calculate correlations
+# Calculate correlations and create heatmap
 correlations = calculate_correlations(returns)
-
-# Create heatmap
 create_heatmap(correlations)

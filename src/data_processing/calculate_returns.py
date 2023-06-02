@@ -14,11 +14,12 @@ def calculate_returns(df):
 	return df
 
 
-def calculate_correlations(dfs):
-	# Merge all dataframes into one, using timestamp as index
-	merged_df = pd.concat(dfs, axis=1)
+def calculate_correlations(returns):
+    # Merge all return series into one DataFrame, using timestamp as index
+    merged_returns = pd.concat(returns, axis=1)
 
-	# Calculate the correlation matrix
-	corr_matrix = merged_df.corr()
+    # Calculate the correlation matrix
+    corr_matrix = merged_returns.corr()
 
-	return corr_matrix
+    return corr_matrix
+
